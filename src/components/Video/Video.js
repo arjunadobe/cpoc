@@ -4,7 +4,6 @@ import { Button } from "antd";
 import "./video.css";
 
 const Video = () => {
-  const [code, setCode] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [recording, setRecording] = useState(false);
   const hints = new Map();
@@ -28,7 +27,7 @@ const Video = () => {
 
     })
         .then((result: zxing.Result) => {
-          setCode(result.getText());
+          alert(result.getText());
           stopStreamedVideo();
         })
         .catch(err => {
@@ -75,7 +74,6 @@ const Video = () => {
       <div className="container-fluid">
         <div className="w-100 row align-items-center">
           <div className="row">{errorMessage}</div>
-          <div className="row">{code}</div>
           <div className="row">
             {!recording && (
                 <Button
