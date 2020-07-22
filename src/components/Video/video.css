@@ -9,11 +9,53 @@
 .video {
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .video video {
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  top: 200px;
+  position: absolute;
+}
+
+.dynam-info {
+  position: absolute;
+  height: 50px;
+  top: 12%;
+  text-align: center;
+  color: hsla(0,0%,100%,.8);
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9;
+}
+
+
+#idcanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 2;
 }
 
 .video__explanation {
